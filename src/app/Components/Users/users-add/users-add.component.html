@@ -1,28 +1,42 @@
-<form>
-  <div class="form-group">
-    <label for="txtUsername">Username</label>
-    <input [(ngModel)]="model.Username" type="text" class="form-control" id="txtUsername" placeholder="Enter email">
-  </div>
+<div class="container">
+  <form #userform="ngForm">
 
-  <div class="form-group">
-    <label for="txtName">Name</label>
-    <input [(ngModel)]="model.Name" type="text" class="form-control" id="txtName" placeholder="Enter Name">
-  </div>
+    <div class="form-group">
+      <label for="txtUsername">Username</label>
+      <input [(ngModel)]="model.Username" type="text" class="form-control" id="txtUsername" placeholder="Enter email" name="Username">
+    </div>
 
-  <div class="form-group">
-    <label for="txtSurname">Surname</label>
-    <input [(ngModel)]="model.Surname"type="text" class="form-control" id="txtSurname" placeholder="Enter Surname">
-  </div>
+    <div class="form-group">
+      <label for="txtPassword">Password</label>
+      <input [(ngModel)]="model.Password" type="password" id="txtPassword" placeholder="Enter Password" name="Password">
+    </div>
 
-  <div class="form-group">
-    <label for="txtLocation">Location</label>
-    <input [(ngModel)]="model.LocationFK" type="text" class="form-control" id="txtLocation" placeholder="Enter Location">
-  </div>
+    <div class="form-group">
+      <label for="txtName">Name</label>
+      <input [(ngModel)]="model.Name" type="text" class="form-control" id="txtName" placeholder="Enter Name" name="Name">
+    </div>
 
-  <div class="form-group">
-    <label for="txtDate">Date of Birth</label>
-    <input [(ngModel)]="model.DateofBirth "type="date" id="txtDate" placeholder="Enter email">
-  </div>
+    <div class="form-group">
+      <label for="txtSurname">Surname</label>
+      <input [(ngModel)]="model.Surname"type="text" class="form-control" id="txtSurname" placeholder="Enter Surname" name="Surname">
+    </div>
 
-  <button type="button" class="btn btn-primary" (click)="Register()">Submit</button>
-</form>
+    <div class="form-group">
+      <label for="txtLocation">Location</label>
+      <input [(ngModel)]="model.LocationFK" type="text" class="form-control" id="txtLocation" placeholder="Enter Location" name="Location">
+    </div>
+
+    <div class="form-group">
+      <label for="txtDate">Date of Birth</label>
+      <input [(ngModel)]="model.DateofBirth "type="date" id="txtDate" placeholder="Enter email" name="DateofBirth">
+    </div>
+
+    <div class="form-group">
+      <label for="txtEmail">Email</label>
+      <input [(ngModel)]="model.Email" type="email" id="txtEmail" placeholder="Enter email" name="Email">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="Register()">Submit</button>
+  </form>
+
+</div>

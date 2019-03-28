@@ -5,4 +5,6 @@ export class UserModel {
   Location: string;
   LocationFK: number;
   DateofBirth: string;
+  Email: string;
+  Password: string;
 }

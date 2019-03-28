@@ -20,6 +20,7 @@ export class UsersAddComponent implements OnInit {
   }
 
   public Register() {
+    //debugger;
     this.usersService.addUser(this.model).subscribe(x => {
       //Swal.fire('Success','Operation succeful');
     }, error1 => {
