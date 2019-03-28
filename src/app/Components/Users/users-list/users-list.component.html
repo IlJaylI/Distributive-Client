@@ -1,0 +1,21 @@
+<div>
+  <table class="table table-hover table-responsive">
+    <thead>
+    <td>Username</td>
+    <td>Name</td>
+    <td>surname</td>
+    <td>location</td>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{u.Username}}</td>
+      <td>{{u.Name}}</td>
+      <td>{{u.Surname}}</td>
+      <td>{{u.Location}}</td>
+      <!--<td>{{u.DateofBirth}}</td>-->
+      <td><a href="\users\{{u.Username}}">View Details</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
