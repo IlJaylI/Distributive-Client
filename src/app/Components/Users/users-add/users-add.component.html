@@ -24,6 +24,10 @@
     <div class="form-group">
       <label for="txtLocation">Location</label>
       <input [(ngModel)]="model.LocationFK" type="text" class="form-control" id="txtLocation" placeholder="Enter Location" name="Location">
+
+      <select [(ngModel)]="model.LocationFK" name="Location" class="form-control" id="ddloction">
+        <option *ngFor="let l of loctionList" value="{{l.id}}">{{l.name}}</option>
+      </select>
     </div>
 
     <div class="form-group">
