@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {UserModel} from '../Models/UserModel';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
 
@@ -28,6 +28,11 @@ export class UsersService {
     return this.http.post(this.baseUrl + 'api/users/create', user);
   }
 
+  public userAuthentication(userName, password) {
+    const data = 'username=' + userName + '&password=' + password + '&grant_type=password';
+    const reqHeader = new HttpHeaders({'Content-Type': 'application/x-www-urlencoded', 'No-Auth': 'True'});
+    return this.http.post(this.baseUrl + '/token', data, {headers: reqHeader});
+  }
 
 
 }
